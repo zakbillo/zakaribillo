@@ -1,0 +1,26 @@
+name: "Zakari L. Billo"
+output_dir: "docs"  
+navbar:
+  title: "Zakari L. Billo"
+  left:
+    - text: "About"
+      href: index.html
+    - text: "Experience"
+      icon: fa-file-pdf-o
+      href: experience.html
+  right:
+    - text: "GitHub"
+      icon: fa-github 
+      href: https://github.com/zakbillo
+    - text: "Contact"
+      icon: fa-envelope-o
+      href: mailto:zlb2008@cumc.columbia.edu
+    - text: "LinkedIn"
+      icon: fa-linkedin
+      href: https://www.linkedin.com/in/zakaribillo/
+output:
+  html_document:
+    theme: cosmo  
+    css: styles.css
+    includes:
+      after_body: footer.html 
