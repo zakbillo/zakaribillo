@@ -2,8 +2,8 @@
 title: "Interactives"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
-    vertical_layout: fill
+    orientation: rows 
+    vertical_layout: scroll
     theme: cosmo
 ---
 
@@ -46,9 +46,9 @@ plot1 = instacart |> group_by(aisle) |>
   n = n()) |>
   arrange(desc(n))|>
   filter( n > 10000) |>
-  ggplot(aes(x = n, y = reorder(aisle, n), fill = n)) + 
+  ggplot(aes(x = n, y = reorder(aisle, n), fill = n)) +  
   geom_col(alpha = 0.9) +
-  labs(title = "Order Counts (for Aisles with >10k Orders)",
+  labs( # title = "Order Counts (for Aisles with >10k Orders)", # Title now comes from ### header
     x = "Order Count ",
     y = "Aisle") +
   viridis::scale_fill_viridis(
@@ -67,17 +67,14 @@ plot1 = instacart |> group_by(aisle) |>
 ggplotly(plot1)
 ```
 
-Row {data-height=400}
+Row {data-height=400} 
 -----------------------------------------------------------------------
 
-Column {data-width=650}
------------------------------------------------------------------------
-
-### Chart B
+### Chart B {data-width=650}  # Changed from ## to ###
 
 ```{r}
 plot2 <- instacart |>
-  group_by(aisle) |> 
+  group_by(aisle) |>  
   filter(n() > 10000) |>
   ungroup() |>
   group_by(aisle, order_hour_of_day, order_dow) |>
@@ -86,10 +83,10 @@ plot2 <- instacart |>
   summarise(mean_order_count = mean(hourly_items_per_day, na.rm = TRUE), .groups = "drop") |>
   ggplot(
     aes(
-      x = order_hour_of_day, 
-      y = mean_order_count, 
+      x = order_hour_of_day,  
+      y = mean_order_count,  
       color = aisle,
-      group = aisle, 
+      group = aisle,  
       text = paste(
         "<b>Aisle:</b>", aisle,
         "<br><b>Hour:</b>", order_hour_of_day,
@@ -97,9 +94,9 @@ plot2 <- instacart |>
       )
     )
   ) +
-  geom_line(size = 1) + 
+  geom_line(size = 1) +  
   labs(
-    title = "Mean Item Count by Hour of Day (Per Aisle)",
+    # title = "Mean Item Count by Hour of Day (Per Aisle)", # Title now comes from ### header 
     subtitle = "For aisles with >10,000 total orders",
     x = "Hour of Day (0-23)",
     y = "Mean Item Count",
@@ -112,39 +109,36 @@ plot2 <- instacart |>
 ggplotly(plot2, tooltip = "text")
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Chart C
+### Chart C {data-width=350} # Changed from ## to ###
 
 ```{r}
 top_3 <- instacart |>
   group_by(product_name) |>
-  summarize(n = n(), .groups = "drop") |> 
-  arrange(desc(n)) |>                 
+  summarize(n = n(), .groups = "drop") |>  
+  arrange(desc(n)) |>          
   slice_head(n = 3)
 
 plot3 <- instacart |>
   filter(
     product_name %in% c(
-      "Banana", 
-      "Bag of Organic Bananas", 
+      "Banana",  
+      "Bag of Organic Bananas",  
       "Organic Strawberries"
     )
   ) |>
   add_count(product_name) |>
   ggplot(
   aes(x = product_name, y = order_hour_of_day, fill = n)) +
-  geom_violin(trim = TRUE) + 
+  geom_violin(trim = TRUE) +  
   labs(
-    title = "Order Density by Hour for the 3 Most Popular Items",
+    # title = "Order Density by Hour for the 3 Most Popular Items", # Title now comes from ### header
     x = "Product Name",
     y = "Hour of Day (0-23)",
     fill = "Total Orders"
   ) +
   theme_minimal() +
   theme(
-    legend.position = "right" 
+    legend.position = "right"  
   )
 
 ggplotly(plot3)
