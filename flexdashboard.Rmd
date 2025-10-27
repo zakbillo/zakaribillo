@@ -7,6 +7,8 @@ output:
     theme: cosmo
 ---
 
+Here's some plots that I made in P8105: Data Science I
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(tidyverse)
@@ -31,16 +33,14 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-Column {data-width=650}
+Row {data-height=600}
 -----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 data("instacart")
-```
 
-## Chart A
-
-```{r}
 plot1 = instacart |> group_by(aisle) |>
   summarize(
   n = n()) |>
@@ -67,14 +67,17 @@ plot1 = instacart |> group_by(aisle) |>
 ggplotly(plot1)
 ```
 
-Column {data-width=350}
+Row {data-height=400}
+-----------------------------------------------------------------------
+
+Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Chart B
 
 ```{r}
 plot2 <- instacart |>
-  group_by(aisle) |>
+  group_by(aisle) |> 
   filter(n() > 10000) |>
   ungroup() |>
   group_by(aisle, order_hour_of_day, order_dow) |>
@@ -109,13 +112,16 @@ plot2 <- instacart |>
 ggplotly(plot2, tooltip = "text")
 ```
 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
 ### Chart C
 
 ```{r}
 top_3 <- instacart |>
   group_by(product_name) |>
   summarize(n = n(), .groups = "drop") |> 
-  arrange(desc(n)) |>                     
+  arrange(desc(n)) |>                 
   slice_head(n = 3)
 
 plot3 <- instacart |>
@@ -143,6 +149,3 @@ plot3 <- instacart |>
 
 ggplotly(plot3)
 ```
-```
-
-Go back to [About](index.html)
