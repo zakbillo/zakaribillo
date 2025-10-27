@@ -8,6 +8,8 @@ navbar:
     - text: "Experience"
       icon: fa-file-pdf-o
       href: experience.html
+    - text: "Interactives"
+      href: flexdashboard.html
   right:
     - text: "GitHub"
       icon: fa-github 
