@@ -1,4 +1,5 @@
 name: "Zakari L. Billo"
+output_dir: "."
 navbar:
   title: "Zakari L. Billo"
   left:
