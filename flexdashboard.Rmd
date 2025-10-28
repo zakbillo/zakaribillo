@@ -7,7 +7,7 @@ output:
     theme: cosmo
 ---
 
-Here's some plots that I made in P8105: Data Science I
+Here's some plots that I made in P8105: Data Science I based on the publicly available `Instacart` data set.
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
@@ -36,7 +36,7 @@ scale_fill_discrete = scale_fill_viridis_d
 Row {data-height=600}
 -----------------------------------------------------------------------
 
-### Chart A
+### 
 
 ```{r}
 data("instacart")
@@ -48,7 +48,7 @@ plot1 = instacart |> group_by(aisle) |>
   filter( n > 10000) |>
   ggplot(aes(x = n, y = reorder(aisle, n), fill = n)) +  
   geom_col(alpha = 0.9) +
-  labs( # title = "Order Counts (for Aisles with >10k Orders)", # Title now comes from ### header
+  labs(title = "Order Counts (for Aisles with >10k Orders)",
     x = "Order Count ",
     y = "Aisle") +
   viridis::scale_fill_viridis(
@@ -70,7 +70,7 @@ ggplotly(plot1)
 Row {data-height=400} 
 -----------------------------------------------------------------------
 
-### Chart B {data-width=650}  # Changed from ## to ###
+### 
 
 ```{r}
 plot2 <- instacart |>
@@ -96,7 +96,7 @@ plot2 <- instacart |>
   ) +
   geom_line(size = 1) +  
   labs(
-    # title = "Mean Item Count by Hour of Day (Per Aisle)", # Title now comes from ### header 
+    title = "Mean Item Count by Hour of Day (Per Aisle)", 
     subtitle = "For aisles with >10,000 total orders",
     x = "Hour of Day (0-23)",
     y = "Mean Item Count",
@@ -109,7 +109,7 @@ plot2 <- instacart |>
 ggplotly(plot2, tooltip = "text")
 ```
 
-### Chart C {data-width=350} # Changed from ## to ###
+###  
 
 ```{r}
 top_3 <- instacart |>
@@ -131,7 +131,7 @@ plot3 <- instacart |>
   aes(x = product_name, y = order_hour_of_day, fill = n)) +
   geom_violin(trim = TRUE) +  
   labs(
-    # title = "Order Density by Hour for the 3 Most Popular Items", # Title now comes from ### header
+    title = "Order Density by Hour for the 3 Most Popular Items", 
     x = "Product Name",
     y = "Hour of Day (0-23)",
     fill = "Total Orders"

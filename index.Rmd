@@ -2,12 +2,19 @@
 title: "About"
 ---
 
-## Zakari L. Billo
+<div style="font-size:120%; text-align:center;">
 
-![](images/zlb headshot.jpg)
+<h1 style="font-size:2.2em; margin-bottom:0.5em;">Zakari L. Billo</h1>
 
-I’m a MPHc '26 and a Tow Doctoral Scholar at the Epidemiology Department in the Columbia Mailman School of Public Health. Currently, I'm applying to Biostatistics PhD programs. 
+<img src="images/zlb%20headshot.jpg" alt="Zakari L. Billo headshot"
+     style="width:75%; max-width:350px; display:block; margin:auto;">
 
-My research lies at the intersection of Biostatistics and Epidemiology: developing causal inference methods for structure learning and algorithmic fairness. Specific areas of interest are aging and bias in social policy. I do research under the supervision of Prof. [Daniel Malinsky](https://www.dmalinsky.com/).
+<p style="text-align:left; max-width:700px; margin:auto; margin-top:1em;">
+I’m a MPH candidate '26 and Tow Doctoral Scholar in the Epidemiology Department at the Columbia Mailman School of Public Health. Currently, I'm applying to Biostatistics PhD programs.  
+
+My research lies at the intersection of Biostatistics and Epidemiology: developing causal inference methods for structure learning and algorithmic fairness. Specific areas of interest are aging and bias in social policy. I do research under the supervision of Prof. <a href="https://www.dmalinsky.com/">Daniel Malinsky</a>.  
 
 Before this, I received a BS in Chemistry from the University of North Carolina at Chapel Hill.
+</p>
+
+</div>
