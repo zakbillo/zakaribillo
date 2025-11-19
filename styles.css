@@ -1,0 +1,72 @@
+/* 1. Font Imports: Inter (clean UI) and Fira Code (Technical code) */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;            /* Increased from default 14px */
+  line-height: 1.8;           /* Generous line spacing (Malinsky style) */
+  color: #2c3e50;             /* Softer dark grey, not pure black */
+  background-color: transparent !important; 
+}
+
+/* 2. The Main Paper Sheet */
+.main-container {
+  max-width: 1100px !important; /* Much wider (was ~900px) */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 80px;         /* Huge padding for that "art gallery" feel */
+  background: rgba(255, 255, 255, 0.92); /* Slightly more opaque */
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/* 3. Typography Hierarchy */
+h1, h2, h3, h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #111;
+  margin-top: 2.5em;          /* Big space before new sections */
+  margin-bottom: 1em;         /* Space after headers */
+}
+
+h1 {
+  font-size: 2.8em;           /* Big, bold name */
+  margin-top: 0;              /* No gap at the very top */
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 2em;
+  border-bottom: 1px solid #f1f1f1; /* Subtle divider line like Malinsky */
+  padding-bottom: 8px;
+}
+
+/* 4. Links */
+a {
+  color: #2980b9;             /* Columbia-ish blue */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+a:hover {
+  border-bottom: 1px solid #2980b9; /* Underline on hover only */
+}
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 30px;
+    width: 95%;
+  }
+  h1 { font-size: 2em; }
+}
+
+/* 6. Navbar Tweaks */
+.navbar {
+  border: none;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  font-size: 20px;
+}

@@ -2,11 +2,11 @@
 title: "Experience"
 ---
 
-<object data="experience/ZLB_Resume20250528.pdf" type="application/pdf" width="100%" height="800px">
-<p>
-It appears your browser does not support embedding PDFs.
-You can <a href="experience/ZLB_Resume20250528.pdf">download the PDF file instead</a>.
-</p>
+<object data="experience/ZLB_Resume20250528.pdf" type="application/pdf" width="100%" height="800px" style="border: none;">
+    <p>It appears your browser does not support embedding PDFs.
+    <a href="experience/ZLB_Resume20250528.pdf">Download the PDF file instead</a>.</p>
 </object>
 
+<div style="margin-top: 20px;">
 Go back to [About](index.html)
+</div>

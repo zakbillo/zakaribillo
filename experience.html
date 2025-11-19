@@ -249,11 +249,7 @@ $(document).ready(function () {
   <a href="index.html">About</a>
 </li>
 <li>
-  <a href="experience.html">
-    <span class="fa fa-file-pdf-o"></span>
-     
-    Experience
-  </a>
+  <a href="experience.html">Experience</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -261,21 +257,18 @@ $(document).ready(function () {
   <a href="https://github.com/zakbillo">
     <span class="fa fa-github"></span>
      
-    GitHub
   </a>
 </li>
 <li>
   <a href="mailto:zlb2008@cumc.columbia.edu">
     <span class="fa fa-envelope-o"></span>
      
-    Contact
   </a>
 </li>
 <li>
   <a href="https://www.linkedin.com/in/zakaribillo/">
     <span class="fa fa-linkedin"></span>
      
-    LinkedIn
   </a>
 </li>
       </ul>
@@ -292,30 +285,118 @@ $(document).ready(function () {
 </div>
 
 
-<object data="experience/ZLB_Resume20250528.pdf" type="application/pdf" width="100%" height="800px">
+<object data="experience/ZLB_Resume20250528.pdf" type="application/pdf" width="100%" height="800px" style="border: none;">
 <p>
-It appears your browser does not support embedding PDFs. You can
-<a href="experience/ZLB_Resume20250528.pdf">download the PDF file
+It appears your browser does not support embedding PDFs.
+<a href="experience/ZLB_Resume20250528.pdf">Download the PDF file
 instead</a>.
 </p>
 </object>
+<div style="margin-top: 20px;">
 <p>Go back to <a href="index.html">About</a></p>
+</div>
 
 <hr>
 <p style="text-align: center; color: #888;">
-  © 2025 Zakari L. Billo.
-  <br>
-  <a href="https://www.publichealth.columbia.edu/academics/departments/epidemiology" style="color: #888;">Department of Epidemiology</a>, 
-  <a href="https://www.publichealth.columbia.edu/" style="color: #888;">Mailman School of Public Health</a>, 
-  Columbia University
-  <br>
-  722 W. 168th Street
-  <br>
-  New York, NY
-  <br>
-  USA
+  © 2025 Zakari L. Billo
 </p>
 
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 100,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#6c757d"
+      },
+      "shape": {
+        "type": "circle",   /* Strictly circles */
+        "stroke": {         /* FIX: zero width stroke prevents border distortion */
+          "width": 0,
+          "color": "#000000"
+        },
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 120,
+        "color": "#6c757d",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.8,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "window",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 120,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "push": {
+          "particles_nb": 4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #f8f9fa;
+    pointer-events: none; 
+  }
+  
+  /* FIX: This ensures the canvas isn't stretched/squashed by the browser */
+  #particles-js canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
 
 
 

@@ -1,0 +1,96 @@
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 100,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#6c757d"
+      },
+      "shape": {
+        "type": "circle",   /* Strictly circles */
+        "stroke": {         /* FIX: zero width stroke prevents border distortion */
+          "width": 0,
+          "color": "#000000"
+        },
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 120,
+        "color": "#6c757d",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.8,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "window",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 120,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "push": {
+          "particles_nb": 4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #f8f9fa;
+    pointer-events: none; 
+  }
+  
+  /* FIX: This ensures the canvas isn't stretched/squashed by the browser */
+  #particles-js canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>

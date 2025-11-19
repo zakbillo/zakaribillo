@@ -11,7 +11,7 @@
 
 
 
-<title>About</title>
+<title>index.knit</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -249,11 +249,7 @@ $(document).ready(function () {
   <a href="index.html">About</a>
 </li>
 <li>
-  <a href="experience.html">
-    <span class="fa fa-file-pdf-o"></span>
-     
-    Experience
-  </a>
+  <a href="experience.html">Experience</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -261,21 +257,18 @@ $(document).ready(function () {
   <a href="https://github.com/zakbillo">
     <span class="fa fa-github"></span>
      
-    GitHub
   </a>
 </li>
 <li>
   <a href="mailto:zlb2008@cumc.columbia.edu">
     <span class="fa fa-envelope-o"></span>
      
-    Contact
   </a>
 </li>
 <li>
   <a href="https://www.linkedin.com/in/zakaribillo/">
     <span class="fa fa-linkedin"></span>
      
-    LinkedIn
   </a>
 </li>
       </ul>
@@ -287,46 +280,135 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About</h1>
 
 </div>
 
 
-<div style="font-size:120%; text-align:center;">
-<h1 style="font-size:2.2em; margin-bottom:0.5em;">
-Zakari L. Billo
-</h1>
-<p><img src="images/zlb%20headshot.jpg" alt="Zakari L. Billo headshot"
-     style="width:75%; max-width:350px; display:block; margin:auto;"></p>
-<p style="text-align:left; max-width:700px; margin:auto; margin-top:1em;">
-<p>I’m a MPH candidate ’26 and Tow Doctoral Scholar in the Epidemiology
-Department at the Columbia Mailman School of Public Health. Currently,
-I’m applying to Biostatistics PhD programs.</p>
-<p>My research lies at the intersection of Biostatistics and
-Epidemiology: developing causal inference methods for structure learning
-and algorithmic fairness. Specific areas of interest are aging and bias
-in social policy. I do research under the supervision of
-Prof. <a href="https://www.dmalinsky.com/">Daniel Malinsky</a>.</p>
-Before this, I received a BS in Chemistry from the University of North
-Carolina at Chapel Hill.
-</p>
+<div class="profile-container"
+style="display: flex; gap: 50px; align-items: flex-start;">
+<div class="profile-image" style="flex: 0 0 auto;">
+<p><img src="images/zlb%20headshot.jpg" style="width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.15);"></p>
 </div>
+<div class="profile-text" style="flex: 1;">
+<p>I’m a MPH candidate and Tow Doctoral Scholar with the Epidemiology
+Department in the Mailman School of Public Health at Columbia
+University. I am currently applying to Biostatistics PhD programs for
+the Fall 2026 cycle.</p>
+<p>My work is primarily focused on structure learning, complex networks,
+and algorithmic fairness. I am interested in how these methods apply to
+aging, bioinformatics, and counteracting social bias.</p>
+<p>I conduct research under the supervision of Prof. <a
+href="https://www.dmalinsky.com/">Daniel Malinsky</a>.</p>
+</div>
+</div>
+<style>
+@media (max-width: 768px) {
+.profile-container { flex-direction: column; align-items: center; text-align: center; }
+.profile-image { margin-bottom: 20px; }
+}
+</style>
 
 <hr>
 <p style="text-align: center; color: #888;">
-  © 2025 Zakari L. Billo.
-  <br>
-  <a href="https://www.publichealth.columbia.edu/academics/departments/epidemiology" style="color: #888;">Department of Epidemiology</a>, 
-  <a href="https://www.publichealth.columbia.edu/" style="color: #888;">Mailman School of Public Health</a>, 
-  Columbia University
-  <br>
-  722 W. 168th Street
-  <br>
-  New York, NY
-  <br>
-  USA
+  © 2025 Zakari L. Billo
 </p>
 
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 100,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#6c757d"
+      },
+      "shape": {
+        "type": "circle",   /* Strictly circles */
+        "stroke": {         /* FIX: zero width stroke prevents border distortion */
+          "width": 0,
+          "color": "#000000"
+        },
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 120,
+        "color": "#6c757d",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.8,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "window",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 120,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "push": {
+          "particles_nb": 4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #f8f9fa;
+    pointer-events: none; 
+  }
+  
+  /* FIX: This ensures the canvas isn't stretched/squashed by the browser */
+  #particles-js canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
 
 
 
