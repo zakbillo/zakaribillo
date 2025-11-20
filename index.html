@@ -290,15 +290,16 @@ style="display: flex; gap: 50px; align-items: flex-start;">
 <p><img src="images/zlb%20headshot.jpg" style="width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.15);"></p>
 </div>
 <div class="profile-text" style="flex: 1;">
-<p>I’m a MPH candidate and Tow Doctoral Scholar with the Epidemiology
-Department in the Mailman School of Public Health at Columbia
-University. I am currently applying to Biostatistics PhD programs for
-the Fall 2026 cycle.</p>
-<p>My work is primarily focused on structure learning, complex networks,
-and algorithmic fairness. I am interested in how these methods apply to
-aging, bioinformatics, and counteracting social bias.</p>
-<p>I conduct research under the supervision of Prof. <a
-href="https://www.dmalinsky.com/">Daniel Malinsky</a>.</p>
+<p>I’m a MPH candidate (’26) and Tow Doctoral Scholar with the
+Epidemiology Department in the Mailman School of Public Health at
+Columbia University. I am currently applying to Biostatistics PhD
+programs for the Fall 2026 cycle.</p>
+<p>My work focuses on graphical models: structure learning, complex
+networks, and algorithmic fairness (bias mitigation in ML/statistics). I
+am interested in applying these methods to aging, neuroscience, and
+counteracting social bias.</p>
+<p>I conduct research under the supervision of Prof. Daniel
+Malinsky.</p>
 </div>
 </div>
 <style>
@@ -317,77 +318,56 @@ href="https://www.dmalinsky.com/">Daniel Malinsky</a>.</p>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 100,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#6c757d"
-      },
-      "shape": {
-        "type": "circle",   /* Strictly circles */
-        "stroke": {         /* FIX: zero width stroke prevents border distortion */
-          "width": 0,
-          "color": "#000000"
-        },
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false
-      },
-      "size": {
-        "value": 3,
-        "random": true
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 120,
-        "color": "#6c757d",
-        "opacity": 0.3,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 0.8,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false
-      }
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 60,
+      "density": { "enable": true, "value_area": 800 }
     },
-    "interactivity": {
-      "detect_on": "window",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 120,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "push": {
-          "particles_nb": 4
-        }
-      }
+    "color": { "value": "#6e6e6e" },
+    "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
+    "opacity": { "value": 0.45, "random": false },
+    "size": { "value": 3, "random": true },
+    "line_linked": {
+      "enable": true,
+      "distance": 85,        /* Visible grab without far-away control */
+      "color": "#8a8a8a",
+      "opacity": 0.35,
+      "width": 1
     },
-    "retina_detect": true
-  });
+    "move": {
+      "enable": true,
+      "speed": 0.35,         /* Small motion for life but not chaotic */
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": ["grab", "repulse"]  /* Now responds gently on hover */
+      },
+      "onclick": { "enable": false },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 75,       /* This was too low before, now visible */
+        "line_linked": { "opacity": 1.0 }
+      },
+      "repulse": {
+        "distance": 50,
+        "duration": 0.2       /* Subtle repulse, elegant feel */
+      }
+    }
+  },
+  "retina_detect": true
+});
 </script>
 
 <style>
@@ -399,10 +379,10 @@ href="https://www.dmalinsky.com/">Daniel Malinsky</a>.</p>
     left: 0;
     z-index: -1;
     background-color: #f8f9fa;
-    pointer-events: none; 
+    pointer-events: none;
+    filter: blur(0.25px);
+    opacity: 0.90;
   }
-  
-  /* FIX: This ensures the canvas isn't stretched/squashed by the browser */
   #particles-js canvas {
     display: block;
     width: 100%;
