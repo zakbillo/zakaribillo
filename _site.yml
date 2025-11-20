@@ -4,9 +4,9 @@ navbar:
   title: "Zakari L. Billo"
   left:
     - text: "About"
-      href: index.html
-    - text: "Experience"
-      href: experience.html
+      href: ./
+    - text: "CV"
+      href: cv.html
   right:
     - icon: fa-github 
       href: https://github.com/zakbillo
