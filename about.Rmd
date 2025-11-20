@@ -1,0 +1,23 @@
+<div class="profile-container" style="display: flex; gap: 50px; align-items: flex-start;">
+
+<div class="profile-image" style="flex: 0 0 auto;">
+<img src="images/zlb%20headshot.jpg" style="width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.15);">
+</div>
+
+<div class="profile-text" style="flex: 1;">
+
+I’m a MPH candidate ('26) and Tow Doctoral Scholar with the Epidemiology Department in the Mailman School of Public Health at Columbia University. I am currently applying to Biostatistics PhD programs for the Fall 2026 cycle.
+
+My work focuses on graphical models: structure learning, complex networks, and algorithmic fairness (bias mitigation in ML/statistics). I am interested in applying these methods to aging, neuroscience, and counteracting social bias. 
+
+I conduct research under the supervision of Prof. Daniel Malinsky.
+
+</div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+.profile-container { flex-direction: column; align-items: center; text-align: center; }
+.profile-image { margin-bottom: 20px; }
+}
+</style>
