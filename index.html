@@ -11,7 +11,7 @@
 
 
 
-<title>Zakari L. Billo</title>
+<title>index.knit</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -245,12 +245,7 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="./">About</a>
-</li>
-<li>
-  <a href="cv">CV</a>
-</li>
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -280,67 +275,83 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Zakari L. Billo</h1>
 
 </div>
 
 
-<div class="profile-container"
-style="display: flex; gap: 50px; align-items: flex-start;">
-<div class="profile-image" style="flex: 0 0 auto;">
-<p><img src="images/zlb%20headshot.jpg" style="width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.15);"></p>
+<div class="profile-container">
+<div class="profile-image">
+<p>
+<img src="images/zlb%20headshot.jpg" style="width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.15);">
+</p>
 </div>
-<div class="profile-text" style="flex: 1;">
-<p>I’m a MPH candidate (’26) and Tow Doctoral Scholar with the
-Epidemiology Department in the Mailman School of Public Health at
-Columbia University. I am currently applying to Biostatistics PhD
-programs for the Fall 2026 cycle.</p>
-<p>My work focuses on graphical models: structure learning, complex
-networks, and algorithmic fairness (bias mitigation in ML/statistics). I
-am interested in applying these methods to aging, neuroscience, and
-counteracting social bias.</p>
-<p>I conduct research under the supervision of Prof. Daniel
-Malinsky.</p>
+<div class="profile-text">
+<p>
+<p>I am an Epidemiology MPH candidate (’26) at the Columbia University
+Mailman School of Public Health, applying to Biostatistics PhD programs
+for Fall 2026.</p>
+<p>My research leverages graphical models for causal inference:
+structure learning, complex networks, and algorithmic fairness.
+Interests include aging, neuroscience, cheminformatics, and social bias
+mitigation.</p>
+I conduct research under the supervision of Professor Daniel Malinsky.
+</p>
 </div>
 </div>
-<style>
-@media (max-width: 768px) {
-.profile-container { flex-direction: column; align-items: center; text-align: center; }
-.profile-image { margin-bottom: 20px; }
-}
-</style>
 
 <hr>
 <p style="text-align: center; color: #888;">
   © 2025 Zakari L. Billo
 </p>
+<style>
+  /* General styling for the particle container */
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Must be below the content */
+    background-color: transparent; /* Changed from #f8f9fa to transparent, 
+                                      relying on body background */
+  }
+  #particles-js canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*
+   * NOTE: I removed all the #bio-card and .profile-container styles from here 
+   * because they are already in the main HTML output or should be in styles.css.
+   * Keeping CSS separate is best practice.
+   */
+</style>
+
 <div id="particles-js"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 <script>
+// Initialize particles.js with configuration 
 particlesJS("particles-js", {
   "particles": {
-    "number": { "value": 80, "density": { "enable": true, "value_area": 900 } },
-    "color": { "value": "#777" },
+    // Increased density settings
+    "number": { "value": 80, "density": { "enable": true, "value_area": 600 } },
+    "color": { "value": "#666666" }, 
     "shape": { "type": "circle" },
-    "opacity": {
-      "value": 0.45,
-      "random": true
-    },
-    "size": {
-      "value": 3,
-      "random": true
-    },
+    "opacity": { "value": 0.5, "random": true },
+    "size": { "value": 2.5, "random": true },
     "line_linked": {
       "enable": true,
-      "distance": 110,
+      "distance": 180, 
       "color": "#aaaaaa",
-      "opacity": 0.35,
+      "opacity": 0.5, 
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 0.5,
+      "speed": 0.3, 
       "direction": "none",
       "random": true,
       "straight": false,
@@ -349,31 +360,27 @@ particlesJS("particles-js", {
     }
   },
   "interactivity": {
-    "detect_on": "canvas",
-    "events": { "onhover": { "enable": false }, "onclick": { "enable": false }},
+      "detect_on": "window", 
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab" /* Universal Grab Mode */
+      },
+      "onclick": { "enable": false },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 220, /* Increased grab distance */
+        "line_linked": { 
+          "opacity": 0.8 
+        }
+      }
+    }
   },
   "retina_detect": true
 });
 </script>
-
-<style>
-  #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: #f8f9fa;
-    filter: blur(0.3px);
-    opacity: 0.9;
-  }
-  #particles-js canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-</style>
 
 
 

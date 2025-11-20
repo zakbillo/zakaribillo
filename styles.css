@@ -2,29 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&display=swap');
 
 body {
-  font-size: 18px;  /* 22px → 18px (more standard) */
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
   line-height: 1.7;
+  color: #333;
+  /* IMPORTANT: Body background must be subtle for the particles to show on it */
+  background-color: #f5f5f5; 
 }
 
+/* 2. The Main Paper Sheet (Consolidated Definition) */
 .main-container {
-  max-width: 900px !important; /* 1100px → 900px */
-  padding: 50px 60px;  /* Slightly tighter */
-  margin-top: 40px; 
-  margin-bottom: 40px;
-}
-
-
-/* 2. The Main Paper Sheet */
-.main-container {
-  max-width: 1000px !important;
+  /* NOTE: The R Markdown HTML output already has a max-width of 940px 
+     defined in an inline style block. We override it here, but removing 
+     !important is better practice. Since the Pandoc-generated inline style 
+     is 940px, we set max-width here to 1000px, which should take effect 
+     due to the cascade/selector specificity. */
+  max-width: 1000px; 
   margin-left: auto;
   margin-right: auto;
+  
+  /* Use the generous margins/padding */
   padding: 60px 80px;        
+  margin-top: 60px;
+  margin-bottom: 60px;
+  
+  /* This is what gives the "paper" sheet look over the particle background */
   background: rgba(255, 255, 255, 0.92); 
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  margin-top: 60px;
-  margin-bottom: 60px;
+  
+  /* fixing the index*/
+  position: relative; 
+ /* z-index: 2; /* Any number greater than -1 */
 }
 
 /* 3. Typography Hierarchy */
@@ -50,28 +59,99 @@ h3 {
 
 /* 4. Links */
 a {
-  color: #2980b9;             
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.2s;
+color: #2980b9;
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: border-bottom 0.2s;
 }
 
 a:hover {
-  border-bottom: 1px solid #2980b9; /* Underline on hover only */
+/* Standard text link hover: turns dark blue, and underline appears */
+border-bottom: 1px solid #2980b9; 
+color: #1c6fa4 !important; /* Slightly darker blue than default link color */
 }
 
 /* 5. Mobile Responsiveness */
 @media (max-width: 768px) {
   .main-container {
     padding: 30px;
-    width: 95%;
+    width: 100%; /* Let max-width 1000px handle it */
   }
   h1 { font-size: 2em; }
 }
 
 /* 6. Navbar Tweaks */
 .navbar {
-  border: none;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-  font-size: 20px;
+/* Ensure a light grey background */
+background-color: #f0f0f0 !important; 
+font-size: 22px;
+
+/* NEW: Add a visible bottom border (e.g., 1px solid medium grey) */
+border-bottom: 1px solid #ccc;
+
+/* Re-add the shadow for a lifted look and clear separation */
+box-shadow: 0 2px 20px rgba(0,0,0,0.08); 
+
+/*fixing index*/
+/*position: relative; */
+z-index: 3; /* A higher z-index to stay on top */
 }
+
+/* Ensure the title and links contrast well with the grey background */
+.navbar-brand,
+.navbar-nav > li > a {
+padding-top: 15px !important; 
+padding-bottom: 15px !important;
+color: #333 !important; 
+  
+  /* ADD: Smooth transition for color change to look "realistic" */
+  transition: all 0.2s ease-in-out; /* Changed to 'all' to transition border too */
+}
+
+/* MODIFIED: Consistent dark blue hover state and blue underline for ALL navbar elements */
+.navbar-brand:hover, /* <-- Now including the title hover state */
+.navbar-nav > li > a:hover {
+/* Set color to dark blue */
+color: #1c6fa4 !important;
+/* Set underline to the standard link blue color */
+border-bottom: 1px solid #2980b9;
+background-color:#f0f0f0 !important; 
+}
+
+/* 7. Profile Layout Fixes */
+.profile-container {
+  display: flex; 
+  gap: 50px; 
+  align-items: flex-start;
+  /* Add explicit margin to ensure spacing is consistent with the Rmd file */
+  margin-top: 40px; 
+  margin-bottom: 60px;
+  
+  /*fixing index */
+  position: relative;
+  z-index: 2;
+}
+
+.profile-image {
+  flex: 0 0 auto; /* Ensure image section doesn't grow */
+}
+
+.profile-text {
+  flex: 1; /* Allow text to take up remaining space */
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .profile-container { 
+    /* Stack the image and text vertically on small screens */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+  .profile-image { 
+    margin-bottom: 20px; 
+  }
+}
+
