@@ -4,26 +4,29 @@
 <script>
 particlesJS("particles-js", {
   "particles": {
-    "number": {
-      "value": 60,
-      "density": { "enable": true, "value_area": 800 }
+    "number": { "value": 80, "density": { "enable": true, "value_area": 900 } },
+    "color": { "value": "#777" },
+    "shape": { "type": "circle" },
+    "opacity": {
+      "value": 0.45,
+      "random": true
     },
-    "color": { "value": "#6e6e6e" },
-    "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
-    "opacity": { "value": 0.45, "random": false },
-    "size": { "value": 3, "random": true },
+    "size": {
+      "value": 3,
+      "random": true
+    },
     "line_linked": {
       "enable": true,
-      "distance": 85,        /* Visible grab without far-away control */
-      "color": "#8a8a8a",
+      "distance": 110,
+      "color": "#aaaaaa",
       "opacity": 0.35,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 0.35,         /* Small motion for life but not chaotic */
+      "speed": 0.5,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false
@@ -31,24 +34,7 @@ particlesJS("particles-js", {
   },
   "interactivity": {
     "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": ["grab", "repulse"]  /* Now responds gently on hover */
-      },
-      "onclick": { "enable": false },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 75,       /* This was too low before, now visible */
-        "line_linked": { "opacity": 1.0 }
-      },
-      "repulse": {
-        "distance": 50,
-        "duration": 0.2       /* Subtle repulse, elegant feel */
-      }
-    }
+    "events": { "onhover": { "enable": false }, "onclick": { "enable": false }},
   },
   "retina_detect": true
 });
@@ -63,9 +49,8 @@ particlesJS("particles-js", {
     left: 0;
     z-index: -1;
     background-color: #f8f9fa;
-    pointer-events: none;
-    filter: blur(0.25px);
-    opacity: 0.90;
+    filter: blur(0.3px);
+    opacity: 0.9;
   }
   #particles-js canvas {
     display: block;

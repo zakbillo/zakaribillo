@@ -2,11 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&display=swap');
 
 body {
-  font-family: 'Inter', sans-serif;
-  font-size: 20px;            
-  line-height: 1.8;           
-  color: #2c3e50;            
-  background-color: transparent !important; 
+  font-size: 18px;  /* 22px → 18px (more standard) */
+  line-height: 1.7;
+}
+
+.main-container {
+  max-width: 900px !important; /* 1100px → 900px */
+  padding: 50px 60px;  /* Slightly tighter */
+  margin-top: 40px; 
+  margin-bottom: 40px;
 }
 
 /* 2. The Main Paper Sheet */
