@@ -13,9 +13,9 @@ output:
 
 <div class="profile-text" style="flex: 1;">
 
-I’m a MPH candidate ('26) and Tow Doctoral Scholar with the Epidemiology Department in the Mailman School of Public Health at Columbia University. I am currently applying to Biostatistics PhD programs for the Fall 2026 cycle.
+I’m a MPH Candidate ('26) and Tow Doctoral Scholar at the Mailman School of Public Health in Columbia University. I am currently applying to Biostatistics PhD programs for the Fall 2026 cycle.
 
-My work focuses on graphical models: structure learning, complex networks, and algorithmic fairness (bias mitigation in ML/statistics). I am interested in applying these methods to aging, neuroscience, and counteracting social bias. 
+My work leverages graphical models for causal inference: structure learning, complex networks, and algorithmic fairness (bias mitigation in ML/statistics). I am interested in developing and applying these methods to aging, neuroscience, and counteracting social bias. 
 
 I conduct research under the supervision of Prof. Daniel Malinsky.
 

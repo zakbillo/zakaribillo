@@ -6,7 +6,7 @@ navbar:
     - text: "About"
       href: ./
     - text: "CV"
-      href: cv
+      href: cv.html
   right:
     - icon: fa-github 
       href: https://github.com/zakbillo
