@@ -8,7 +8,7 @@ navbar:
   right:
     - text: "CV"
       href: cv.html
-    - icon: fa-github 
+    - icon: fa-github
       href: https://github.com/zakbillo
     - icon: fa-envelope-o
       href: mailto:zlb2008@cumc.columbia.edu

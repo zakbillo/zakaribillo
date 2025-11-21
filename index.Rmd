@@ -1,8 +1,10 @@
 ---
-title: ""
+title: "Zakari L. Billo"
 output: 
   html_document:
     theme: cosmo
+    includes:
+      in_header: header-fix.html
 ---
 
 <div class="profile-container">
@@ -12,9 +14,9 @@ output:
 <div class="profile-text">
 <p>
 
-I am an Epidemiology MPH candidate (’26) at the Columbia University Mailman School of Public Health, applying to Biostatistics PhD programs for Fall 2026. I conduct research under the supervision of Prof. Daniel Malinsky.
+I am an Epidemiology MPH candidate (’26) at **Columbia University Mailman School of Public Health**, applying to Biostatistics PhD programs for Fall 2026. 
 
-My research leverages graphical models for causal inference: structure learning, complex networks, and algorithmic fairness. Interests include aging, neuroscience, cheminformatics, and social bias mitigation.
+My work is on **graphical models** for **causal inference**: **structure learning**, **complex networks**, and **algorithmic fairness**. Interests include aging, neuroscience, cheminformatics, and social bias mitigation. I conduct research under the supervision of **Prof. Daniel Malinsky**.
 
 </p>
 </div>
