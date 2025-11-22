@@ -1,2 +1,2 @@
 # zakaribillo
-Zakari's personal website
+Zakari Billo's personal website
